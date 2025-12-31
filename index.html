@@ -1,57 +1,205 @@
 <!doctype html>
 <html lang="id">
 <head>
-     <meta charset="utf-8">
-	 <title> WELCOME </title>
-	 <link href="css.css" rel="stylesheet">
+<meta charset="utf-8">
+<title>Curriculum Vitae</title>
+
+<style>
+/* ===== RESET DASAR ===== */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background: #FF8D78;
+  padding: 40px;
+  color: #333;
+}
+
+/* ===== JUDUL ===== */
+h1{
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+h2{
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+p{
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* ===== LAYOUT UTAMA ===== */
+.home-layout{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* ===== KIRI & KANAN ===== */
+.left-side,
+.right-side{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 180px;
+}
+
+/* ===== FOTO ===== */
+.side-photo{
+  text-align: center;
+}
+
+.side-img{
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  margin: 0 auto 6px;
+}
+
+/* ===== MENU TENGAH ===== */
+.menu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 360px;
+}
+
+.menu a{
+  width: 300px;
+  text-align: center;
+  padding: 12px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  color: #0f3b4b;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.menu a:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+.menu a.active{
+  background: #0f3b4b;
+  color: #fff;
+}
+
+/* ===== SECTION (ISI MENU) ===== */
+section{
+  min-height: 100vh;
+  padding: 80px 40px;
+}
+
+#home{ background:#FF8D78; }
+#fiqih{ background:#E8C8C3; }
+#eva{ background:#E8C383; }
+#yurisa{ background:#C3E8D8; }
+
+/* ===== RESPONSIVE HP ===== */
+@media (max-width: 900px){
+  .home-layout{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-side,
+  .right-side{
+    flex-direction: row;
+    width: auto;
+  }
+}
+</style>
 </head>
 
-<body class="home-page page-home">	
+<body>
 
-<h1>Curicculum Vitae </h1>
+<h1>Curriculum Vitae</h1>
 <h2>Mahasiswa Universitas Nusa Bangsa</h2>
-<p>Kami adalah mahasiswa Universitas Nusa Bangsa yang berorientasi pada pengembangan diri baik secara akademik maupun non-akademik. Aktif dalam kegiatan organisasi kemahasiswaan yang melatih kemampuan berpikir kritis, komunikasi, dan manajemen kegiatan. Dengan sikap disiplin, bertanggung jawab, dan kemauan belajar yang tinggi, kami siap mengembangkan potensi diri serta berkontribusi secara profesional di lingkungan kerja maupun organisasi.</p>
+<p>
+Mahasiswa yang berminat dalam organisasi untuk pengembangan diri mulai dari kerja sama tim dan mengerjakan proyek.
+</p>
 
+<!-- ===== LAYOUT FOTO + MENU ===== -->
 <div class="home-layout">
 
-<div class="left-side">
-<div class="side-photo">
-<img class="side-img" src="UNB.jpg">
-<p>Universitas Nusa Bangsa</p>
-</div>
+  <!-- KIRI -->
+  <div class="left-side">
+    <div class="side-photo">
+      <img src="UNB.jpg" class="side-img">
+      <p>Universitas Nusa Bangsa</p>
+    </div>
 
-<div class="side-photo">
-<img class="side-img" src="fqh.JPEG">
-<p>Muhamad Fiqih Gumilang</p>
-<p>Prodi Agribisnis</p>
-<p>41205420123014</p>
-</div>
-</div>
+    <div class="side-photo">
+      <img src="fqh.jpeg" class="side-img">
+      <p>Muhamad Fiqih</p>
+    </div>
+  </div>
 
-<nav class="menu home-menu">
-  <a class="active"
-  href="tugas.html">Home</a>	
-  <a href="Experience.html">Muhamad Fiqih Gumilang</a>
-  <a href="Contact.html">Eva Apriyani</a>
-  <a href="Yurisa.html">Yurisa</a>
-</nav>
+  <!-- MENU -->
+  <nav class="menu">
+    <a href="#home" class="active">Home</a>
+    <a href="#fiqih">Muhamad Fiqih Gumilang</a>
+    <a href="#eva">Eva Apriyani</a>
+    <a href="#yurisa">Yurisa</a>
+  </nav>
 
-<div class="right-side">
-<div class="side-photo">
-<img class="side-img" src="yurisa.JPEG">
-<p>Yurisa Azhara</p>
-<p>Prodi Agribisnis</p>
-<p>41205420123011</p>
-</div>
+  <!-- KANAN -->
+  <div class="right-side">
+    <div class="side-photo">
+      <img src="yurisa.jpeg" class="side-img">
+      <p>Yurisa Azhara</p>
+    </div>
 
-<div class="side-photo">
-<img class="side-img" src="Eva.JPEG" alt="profil kanan 2">
-<p>    Eva Apriyani</p>
-<p>Prodi Agribisnis</P>
-<p>41205420123010</p>
-</div>
-</div>
+    <div class="side-photo">
+      <img src="eva.jpeg" class="side-img">
+      <p>Eva Apriyani</p>
+    </div>
+  </div>
 
 </div>
 
-  
+<!-- ===== ISI HALAMAN ===== -->
+<section id="home">
+  <h2>Home</h2>
+  <p>Selamat datang di halaman Curriculum Vitae.</p>
+</section>
+
+<section id="fiqih">
+  <h2>Muhamad Fiqih Gumilang</h2>
+  <p>Prodi Agribisnis</p>
+  <p>NIM: 41205420123014</p>
+</section>
+
+<section id="eva">
+  <h2>Eva Apriyani</h2>
+  <p>Prodi Agribisnis</p>
+  <p>NIM: 41205420123010</p>
+</section>
+
+<section id="yurisa">
+  <h2>Yurisa Azhara</h2>
+  <p>Prodi Agribisnis</p>
+  <p>NIM: 41205420123011</p>
+</section>
+
+</body>
+</html>
