@@ -1,8 +1,7 @@
-<!doctype html>
 <html lang="id">
 <head>
      <meta charset="utf-8">
-	 <title> WELCOME </title>
+	 WELCOME
 	 <link href="css.css" rel="stylesheet">
 </head>
 
